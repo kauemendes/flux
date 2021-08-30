@@ -434,6 +434,8 @@ func (b *threadSafeBuffer) String() string {
 
 // execGitCmd runs a `git` command with the supplied arguments.
 func execGitCmd(ctx context.Context, args []string, config gitCmdConfig) error {
+	fmt.Println("executing git command ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ")
+
 	c := exec.CommandContext(ctx, "git", args...)
 
 	if config.dir != "" {
